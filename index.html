@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pirates Flashcards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Pirates Flashcards</h1>
+        <button id="new-button">+</button>
+        <div id="flashcards-cont"></div>
+        <button id="clear-button">Clear Cards</button>
+    </div>
+
+    <div class="overlay" id="overlay" style="display: none;"></div>
+
+    <div class="modal" id="modal" style="display: none;">
+        <h3>Enter Front Page</h3>
+        <input type="text" placeholder="Front card..." id="front-input">
+        <h3>Enter Back Page</h3>
+        <input type="text" placeholder="Back card..." id="back-input">
+        <button id="cancel">Cancel</button>
+        <button id="submit">Save</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

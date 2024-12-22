@@ -1,0 +1,9 @@
+This website will have a button that has a + at the top of the screen
+
+Then you will have javascript to make an input box come out to have input for the question and answer
+
+Then there will be customizability of the color of card
+
+There will also be three dots at the top to move the card
+
+and a red delete button to delete the card
