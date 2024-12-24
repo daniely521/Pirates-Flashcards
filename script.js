@@ -24,8 +24,8 @@ submitButton.addEventListener("click", () => {
 function openPop() {
     frontInput.value = '';
     backInput.value = '';
-    overlay.style.display = 'block';
-    modal.style.display = 'block';
+    overlay.classList.remove("hidden");
+    modal.classList.remove("hidden");
 }
 
 function cancel() {
@@ -35,8 +35,8 @@ function cancel() {
 }
 
 function hidePop() {
-    overlay.style.display = 'none';
-    modal.style.display = 'none';
+    overlay.classList.add("hidden");
+    modal.classList.add("hidden");
 }
 
 function newCard() {
@@ -44,8 +44,10 @@ function newCard() {
     card.style.left = '100px';
     card.style.top = '100px';
     card.style.position = "absolute";
+    card.className = "card";
 
     const moveArea = document.createElement('div');
+    moveArea.className = "move-area";
 
     moveArea.textContent = '...';
 
@@ -99,9 +101,14 @@ function newCard() {
 
     const deleteBtn = document.createElement("button");
     deleteBtn.className = "delete-button";
+    deleteBtn.textContent = "delete";
     deleteBtn.addEventListener("click", () => {
         card.style.display = 'none';
     });
+
+    card.appendChild(frontText);
+    card.appendChild(backText);
+    card.appendChild(deleteBtn);
 
     flashcards.appendChild(card);
 
